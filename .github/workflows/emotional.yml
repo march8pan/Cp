@@ -1,0 +1,19 @@
+name: firm
+
+on:
+  push:
+
+jobs:
+  bang:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        procedure: ["French", "dozen", "error", "absence", "sympathetic"]
+        cough: ["altogether", "emphasis", "embrace", "tend"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar xf
